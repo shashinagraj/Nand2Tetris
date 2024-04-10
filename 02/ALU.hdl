@@ -64,9 +64,7 @@ CHIP ALU {
     /* Post-setting the output */
     Not16 (in=computef, out=negatecomputef);
 
-    Mux16 (a=computef, b=negatecomputef, sel=no, out=finalout);
-
-    Nomod16 (a=finalout, out=out);
+    Mux16 (a=computef, b=negatecomputef, sel=no, out=finalout, out=out);
 
     /* Is resulting output zero */
     Or16Way (a=finalout, out=temp);
