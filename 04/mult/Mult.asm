@@ -47,5 +47,5 @@ D; JEQ
     @R2
     D=M
 
-    @R2
+    @END
     D; JMP
